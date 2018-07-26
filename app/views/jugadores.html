@@ -1,0 +1,34 @@
+<div ng-controller="JugadoresCtrl">
+  <div class="jumbotron text-center">
+    <h2>{{ title }}</h2>
+    <hr>
+    <p>{{ message }}</p>
+
+  <table id="jugadores" class="table table-striped table-bordered">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Nombre</th>
+        <th>Club</th>
+        <th>Edad</th>
+        <th>Posición</th>
+        <th>Id.Selección</th>
+        <th>Edición</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="d in data">
+        <td>{{d.Id}}</td>
+        <td>{{d.Nombre}}</td>
+        <td>{{d.Club}}</td>
+        <td>{{d.Edad}}</td>
+        <td>{{d.Posicion}}</td>
+        <td>{{d.IdSeleccion.Id}}</td>
+        <td class="text-right">
+            <a href="#/editarjugador/{{d.Id}}"><img src="images/iconos/edit.png"></a>
+            <a href="#/eliminarjugador/{{d.Id}}"><img src="images/iconos/delete.png"></a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

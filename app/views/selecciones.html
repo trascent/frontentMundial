@@ -1,0 +1,30 @@
+<div ng-controller="SeleccionesCtrl">
+  <div class="jumbotron text-center">
+    <h2>{{ title }}</h2>
+    <hr>
+    <p>{{ message }}</p>
+
+  <table id="selecciones" class="table table-striped table-bordered">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Nombre</th>
+        <th>Técnico</th>
+        <th>Federación</th>
+        <th>País</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="d in data">
+        <td>{{d.Id}}</td>
+        <td>{{d.Nombre}}</td>
+        <td>{{d.Tecnico}}</td>
+        <td>{{d.Federacion}}</td>
+        <td>{{d.Pais}}</td>
+        <td class="text-right">
+            <a href="#/eliminarseleccion/{{d.Id}}"><img src="images/iconos/delete.png"></a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
