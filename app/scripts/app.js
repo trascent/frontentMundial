@@ -94,6 +94,16 @@ angular
         controller: 'EditarjugadorCtrl',
         controllerAs: 'editarjugador'
       })
+      .when('/agregarseleccion', {
+        templateUrl: 'views/agregarseleccion.html',
+        controller: 'AgregarseleccionCtrl',
+        controllerAs: 'agregarseleccion'
+      })
+      .when('/agregarjugador', {
+        templateUrl: 'views/agregarjugador.html',
+        controller: 'AgregarjugadorCtrl',
+        controllerAs: 'agregarjugador'
+      })
       .otherwise({
         redirectTo: '/'
       });

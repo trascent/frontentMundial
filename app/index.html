@@ -2,10 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>practica1frontendApp</title>
+  <title>Mundial De Futbol Rusia 2018</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width">
-  <script src="https://use.fontawesome.com/64b53ddd5b.js"></script>
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
   <!-- build:css(.) styles/vendor.css -->
   <!-- bower:css -->
@@ -31,19 +30,9 @@
     <div class="container-fluid">
       <div ng-view=""></div>
     </div>
-  <div ng-include="'views/footer.html'" ng-controller="footerCtrl"></div>
-
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-    <script>
-    !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
-      (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
-      r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
-    }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-    ga('create', 'UA-XXXXX-X');
-    ga('send', 'pageview');
-    </script>
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
@@ -96,6 +85,8 @@
   <script src="scripts/controllers/eliminarseleccion.js"></script>
   <script src="scripts/controllers/eliminarjugador.js"></script>
   <script src="scripts/controllers/editarjugador.js"></script>
+  <script src="scripts/controllers/agregarseleccion.js"></script>
+  <script src="scripts/controllers/agregarjugador.js"></script>
   <!-- endbuild -->
   <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
   </html>

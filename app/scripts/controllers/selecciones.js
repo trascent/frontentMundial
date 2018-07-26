@@ -11,7 +11,7 @@ angular.module('practica1frontendApp')
   .controller('SeleccionesCtrl', function ($scope,$http) {
     $scope.title = 'Selecciones';
     $scope.message = 'Listado de Selecciones';
-    $http.get(api_path+'seleccion?limit=0')
+    $http.get(api_path+'seleccion?limit=0&sortby=Id&order=asc')
     .then(function(response) {
         $scope.data = response.data;
 });

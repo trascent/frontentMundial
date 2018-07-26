@@ -1,0 +1,49 @@
+<div ng-controller="AgregarjugadorCtrl">
+  <div class="jumbotron text-center">
+    <h2>{{ title }}</h2>
+    <hr>
+    <p>{{ message }}</p>
+
+  <form name="jugadorForm" class="form-horizontal">
+    <div class="form-group">
+      <label for="name" class="col-sm-2 control-label">Nombre:</label>
+      <div class="col-sm-10">
+        <input name="name" type="text" ng-model="player.Nombre" class="form-control"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="club" class="col-sm-2 control-label">Club:</label>
+      <div class="col-sm-10">
+        <input name="club" type="text" ng-model="player.Club" class="form-control"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="edad" class="col-sm-2 control-label">Edad:</label>
+      <div class="col-sm-10">
+        <input name="edad" type="text" ng-model="player.Edad" class="form-control"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="posicion" class="col-sm-2 control-label">Posición:</label>
+      <div class="col-sm-10">
+        <input name="posicion" type="text" ng-model="player.Posicion" class="form-control"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="seleccion" class="col-sm-2 control-label">Selección:</label>
+      <div class="col-sm-10">
+          <select ng-model="player.IdSeleccion">
+          <option ng-repeat="d in dataseleciones" ng-value="d.Id">{{d.Pais}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <input type="submit" ng-click="cancel()" value="Cancelar" class="btn btn-primary"/>
+        <input type="submit" ng-click="add()" value="Guardar" class="btn btn-success"/>
+      </div>
+    </div>
+  </form>
+  <pre>Jugador = {{player | json}}</pre>
+  </div>
+</div>
